@@ -93,6 +93,5 @@ func logDuration(ctx context.Context, method string, req any, duration time.Dura
 }
 
 func shouldLogContent(method string, ignoreMethods *collection.Set) bool {
-	_, ok := ignoreContentMethods.Load(method)
-	return !ok && !ignoreMethods.Contains(method)
+	return false
 }
